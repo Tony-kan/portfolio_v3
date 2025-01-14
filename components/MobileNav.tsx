@@ -11,10 +11,10 @@ function MobileNav() {
   const pathname = usePathname();
   return (
     <Sheet>
-      <SheetTrigger className="flex justify-center items-center">
+      <SheetTrigger className="flex justify-center items-center ">
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
+      <SheetContent className="flex flex-col text-white">
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
