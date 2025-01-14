@@ -1,11 +1,4 @@
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaFigma,
-  FaNodeJs,
-} from "react-icons/fa";
+
 
 // About Data
 export const about = {
@@ -105,46 +98,6 @@ export const education = {
   ],
 };
 
-// skills data
-export const skills = {
-  title: "my skills",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
-  skillList: [
-    {
-      icon: <FaHtml5 />,
-      name: "html 5",
-    },
-    {
-      icon: <FaCss3 />,
-      name: "css 3",
-    },
-    {
-      icon: <FaJs />,
-      name: "javascript",
-    },
-    {
-      icon: <FaReact />,
-      name: "react.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      name: "next.js",
-    },
-    {
-      icon: <SiTailwindcss />,
-      name: "tailwind.css",
-    },
-    {
-      icon: <FaNodeJs />,
-      name: "node.js",
-    },
-    {
-      icon: <FaFigma />,
-      name: "figma",
-    },
-  ],
-};
 
 // projects
 export const projects = [
