@@ -39,12 +39,13 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
-        muted: {
-          DEFAULT: "hsl(var(--muted))",
-          foreground: "hsl(var(--muted-foreground))",
-        },
+        // muted: {
+        //   DEFAULT: "hsl(var(--muted))",
+        //   foreground: "hsl(var(--muted-foreground))",
+        // },
         accent: {
           DEFAULT: "#00ff99",
+          // DEFAULT: "#31BEC7 ",
           hover: "#00e187",
         },
         destructive: {

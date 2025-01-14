@@ -29,7 +29,7 @@ export default function Home() {
         </div>
 
         {/* btn and socials  handlers */}
-        <div className="flex flex-col xl:flex-row items-center mt-24">
+        <div className="flex flex-col xl:flex-row items-center ml-16 mt-24">
           <Button
             variant="outline"
             size="lg"

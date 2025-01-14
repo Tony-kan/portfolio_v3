@@ -104,7 +104,7 @@ function Resume() {
                           className="bg-[#232329] h-[184px]  py-6 px-10 rounded-xl flex flex-col justify-center items-center  lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center  lg:text-left">
+                          <h3 className="text-xl font-bold text-white max-w-[260px] min-h-[60px] text-center  lg:text-left">
                             {item.position}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -137,7 +137,7 @@ function Resume() {
                           className="bg-[#232329] h-[184px]  py-6 px-10 rounded-xl flex flex-col justify-center items-center  lg:items-start gap-1"
                         >
                           <span className="text-accent">{item.duration}</span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left capitalize">
+                          <h3 className="text-xl font-bold text-white max-w-[260px] min-h-[60px] text-center lg:text-left capitalize">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -170,7 +170,7 @@ function Resume() {
                         <TooltipProvider delayDuration={100}>
                           <Tooltip>
                             <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                              <div className="text-6xl font-bold text-white group-hover:text-accent transition-all duration-300">
                                 {skill.icon}
                               </div>
                             </TooltipTrigger>
@@ -207,7 +207,9 @@ function Resume() {
                         <span className="text-white/60">
                           {item.fieldName}:{""}
                         </span>
-                        <span className="text-xl">{item.fieldValue}</span>
+                        <span className="text-xl font-bold text-white">
+                          {item.fieldValue}
+                        </span>
                       </li>
                     );
                   })}
