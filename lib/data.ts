@@ -1,5 +1,3 @@
-
-
 // About Data
 export const about = {
   title: "about me",
@@ -97,7 +95,6 @@ export const education = {
     },
   ],
 };
-
 
 // projects
 export const projects = [

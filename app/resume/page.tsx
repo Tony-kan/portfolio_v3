@@ -22,7 +22,7 @@ import {
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 // skills data
-export const skills = {
+ const skills = {
   title: "my skills",
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
            Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
