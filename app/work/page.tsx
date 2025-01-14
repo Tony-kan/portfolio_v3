@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Work() {
   return (
-    <div>Work</div>
-  )
+    <div>
+      <h1 className="text-white">Work</h1>
+    </div>
+  );
 }
 
-export default Work
+export default Work;

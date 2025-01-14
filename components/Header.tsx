@@ -8,10 +8,10 @@ import Image from "next/image";
 
 function Header() {
   return (
-    <header className="py-8 xl:py-12 text-white hidden lg:flex">
+    <header className="py-4 xl:py-4 text-white hidden lg:flex">
       <div className="container mx-auto flex justify-between items-center py-4">
         {/* logo  */}
-        <Link href="/">
+        <Link href="/" className="flex items-center justify-between gap-6">
           <h1 className="text-4xl font-semibold">Tk</h1>
           <span className="text-accent">.</span>
         </Link>
