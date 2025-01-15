@@ -18,6 +18,9 @@ export default {
       lg: "960px",
       xl: "1200px",
     },
+    fontFamily: {
+      primary: "var(--font-geistMono)",
+    },
     extend: {
       colors: {
         background: "black",

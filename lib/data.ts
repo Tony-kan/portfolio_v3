@@ -100,7 +100,8 @@ export const education = {
 export const projects = [
   {
     num: "01",
-    category: "frontend",
+    name: "FurniShop",
+    category: "Websites",
     title: "Project 1",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
@@ -111,7 +112,8 @@ export const projects = [
   },
   {
     num: "02",
-    category: "fullstack",
+    name: "Inferno",
+    category: "React Native",
     title: "Project 2",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
@@ -122,7 +124,8 @@ export const projects = [
   },
   {
     num: "03",
-    category: "frontend",
+    name: "Alina Lee",
+    category: "Websites",
     title: "Project 3",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
