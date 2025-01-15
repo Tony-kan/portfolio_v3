@@ -33,10 +33,11 @@ function Header() {
                 href={link.link}
                 key={index}
                 className="text-2xl hover:text-accent hover:bg-ho transition-all"
+                target="_blank"
               >
-                <div className="bg-white hover:bg-accent-hover size-7 flex items-center justify-center rounded-sm">
+                <div className="bg-white hover:bg-accent-hover w-10 h-8 flex items-center justify-center rounded-sm">
                   <Image
-                    className="size-5"
+                    className="w-6 h-5"
                     src={link.icon}
                     alt={link.name}
                     objectFit="contain"
@@ -49,7 +50,9 @@ function Header() {
 
         <div className="hidden xl:flex items-center gap-8">
           <Link href="/contact">
-            <Button className="font-extrabold">Hire Me</Button>
+            <Button variant="primary" className="font-extrabold">
+              Hire Me
+            </Button>
           </Link>
         </div>
 

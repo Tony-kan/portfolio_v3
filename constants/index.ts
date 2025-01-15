@@ -8,25 +8,27 @@ export const icons = {};
 
 export const socialLinks = [
   {
-    name: "facebook",
-    icon: facebook,
-    link: "https://www.facebook.com/",
-  },
-  {
     name: "github",
     icon: github,
-    link: "",
-  },
-  {
-    name: "instagram",
-    icon: instagram,
-    link: "",
+    link: "https://github.com/Tony-kan",
   },
   {
     name: "LinkenIn",
     icon: linkedin,
-    link: "",
+    link: "https://www.linkedin.com/in/tony-kanyamuka-0007b2238/",
   },
+  {
+    name: "facebook",
+    icon: facebook,
+    link: "https://www.facebook.com/",
+  },
+
+  {
+    name: "instagram",
+    icon: instagram,
+    link: "https://www.instagram.com/tony_kan___/",
+  },
+
   {
     name: "Youtube",
     icon: youtube,
