@@ -16,7 +16,7 @@ export default function Home() {
       className="min-h-[60vh] flex items-center justify-center gap-6 py-12 xl:py-0"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col items-center justify-center mt-24 gap-4">
+        <div className="flex flex-col items-center justify-center mt-40 gap-4">
           <h1 className="text-white font-extrabold text-5xl text-center capitalize">
             a passionate Full-Stack Developer ,
           </h1>

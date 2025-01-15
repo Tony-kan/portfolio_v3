@@ -45,12 +45,12 @@ export const experience = {
   items: [
     {
       company: "Digimax MW",
-      position: "Frontend Developer",
-      duration: "Feb 2024  - present",
+      position: "Lead Frontend Developer",
+      duration: "Feb 2024  - October 2024",
     },
     {
-      company: "Stun Bustle Studios",
-      position: "CEO",
+      company: "Braining X",
+      position: "Founder & CEO",
       duration: "Present",
     },
     {

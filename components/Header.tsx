@@ -32,14 +32,16 @@ function Header() {
               <Link
                 href={link.link}
                 key={index}
-                className="text-2xl hover:text-accent transition-all"
+                className="text-2xl hover:text-accent hover:bg-ho transition-all"
               >
-                <Image
-                  className="filter invert size-6  hover:text-accent"
-                  src={link.icon}
-                  alt={link.name}
-                  objectFit="contain"
-                />
+                <div className="bg-white hover:bg-accent-hover size-7 flex items-center justify-center rounded-sm">
+                  <Image
+                    className="size-5"
+                    src={link.icon}
+                    alt={link.name}
+                    objectFit="contain"
+                  />
+                </div>
               </Link>
             );
           })}
@@ -47,7 +49,7 @@ function Header() {
 
         <div className="hidden xl:flex items-center gap-8">
           <Link href="/contact">
-            <Button>Hire Me</Button>
+            <Button className="font-extrabold">Hire Me</Button>
           </Link>
         </div>
 
