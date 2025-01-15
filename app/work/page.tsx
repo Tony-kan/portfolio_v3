@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import {
   Tooltip,
   TooltipContent,
@@ -14,14 +14,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
-import WorkProjectSliderBtns from "@/components/WorkProjectSliderBtns";
+import {
+  WorkProjectSliderBtns,
+  WorkProjectImagesSliderBtns,
+} from "@/components/WorkProjectSliderBtns";
 import Image from "next/image";
 import { Swiper as SwiperType } from "swiper/types";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import useEmblaCarousel from "embla-carousel-react";
+// import Autoplay from "embla-carousel-autoplay";
 
 const categories = ["React Native", "Swift", "Websites", "UI/UX"];
 
 function Work() {
+  // const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
   // const [project, setProject] = useState(projects[0]);
   const [activeCategory, setActiveCategory] = useState("React Native");
   // const [filteredProjects, setFilteredProjects] = useState([]);
@@ -51,20 +57,16 @@ function Work() {
     return allProjects.filter((project) => project.category === category)
       .length;
   };
-  // const handleSlideChange = (swiper: SwiperType) => {
-  //   //  get current slide index
-  //   const currentIndex = swiper.activeIndex;
-  //   // update projects state based on current slide index
-  //   setProject(projects[currentIndex]);
-  // };
 
-  // const calculateProjectCount = (category: string) => {
-  //   return projects.filter((project) => project.category === category).length;
-  // };
-  console.log("project", project);
-  console.log("filteredProjects", filteredProjects);
-  console.log("activeCategory", activeCategory);
-  console.log("allProjects", allProjects);
+  const [emblaRef, emblaApi] = useEmblaCarousel();
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   return (
     <motion.section
@@ -84,7 +86,7 @@ function Work() {
           <TabsList className=" grid w-full grid-cols-4 gap-6 bg-[#27272c]">
             {categories.map((category) => (
               <TabsTrigger
-                className="text-white font-bold hover:text-accent"
+                className="text-white text-[12px] md:text-md  font-bold hover:text-accent"
                 key={category}
                 value={category}
               >
@@ -169,14 +171,42 @@ function Work() {
                           {/* overlay  */}
                           <div className="absolute  top-0 bottom-0 w-full h-full bg-black/10 z-10"></div>
                           {/* image  */}
-                          <div className="relative w-full h-full">
-                            <Image
+                          {/* <div className="relative w-full h-full"> */}
+                          {/* <Image
                               src={project?.image}
                               fill
                               className="object-cover"
                               alt=""
-                            />
+                            /> */}
+                          <div className="embla h-full w-full" ref={emblaRef}>
+                            <div className="embla__container  h-full w-full">
+                              {project?.images?.map((image, index) => (
+                                <div
+                                  className="embla__slide relative h-full w-full"
+                                  key={index}
+                                >
+                                  <Image
+                                    src={image}
+                                    fill
+                                    className="object-cover"
+                                    alt=""
+                                  />
+                                </div>
+                              ))}
+                            </div>
                           </div>
+                          {project.images.length > 1 && (
+                            <WorkProjectImagesSliderBtns
+                              // containerStyles="flex  gap-4 absolute bottom-[50%] xl:bottom-10 z-20 mt-2 w-full justify-end xl:w-max xl:justify-none"
+                              // btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                              containerStyles="flex z-20 px-2 justify-between items-center absolute top-1/2 transform -translate-y-1/2 w-full"
+                              btnStyles="bg-accent font-extrabold hover:bg-accent-hover text-primary text-[40px] w-[30px] h-[120px] flex justify-center items-center transition-all"
+                              iconsStyles=""
+                              prev={scrollPrev}
+                              next={scrollNext}
+                            />
+                          )}
+                          {/* </div> */}
                         </div>
                       </SwiperSlide>
                     );

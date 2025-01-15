@@ -9,7 +9,15 @@ interface WorkProjectSliderBtnsProps {
   iconsStyles: string;
 }
 
-const WorkProjectSliderBtns = ({
+interface WorkProjectImagesSliderBtnsProps {
+  containerStyles: string;
+  btnStyles: string;
+  iconsStyles: string;
+  next: () => void;
+  prev: () => void;
+}
+
+export const WorkProjectSliderBtns = ({
   containerStyles,
   btnStyles,
   iconsStyles,
@@ -27,4 +35,21 @@ const WorkProjectSliderBtns = ({
   );
 };
 
-export default WorkProjectSliderBtns;
+export const WorkProjectImagesSliderBtns = ({
+  containerStyles,
+  btnStyles,
+  iconsStyles,
+  prev,
+  next,
+}: WorkProjectImagesSliderBtnsProps) => {
+  return (
+    <div className={containerStyles}>
+      <button className={`${btnStyles}  embla__prev left-0"`} onClick={prev}>
+        <PiCaretLeftBold className={iconsStyles} />
+      </button>
+      <button className={`${btnStyles} embla__next right-0`} onClick={next}>
+        <PiCaretRightBold className={iconsStyles} />
+      </button>
+    </div>
+  );
+};
