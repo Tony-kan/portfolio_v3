@@ -22,7 +22,7 @@ import {
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 
 // skills data
- const skills = {
+const skills = {
   title: "my skills",
   description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
            Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
@@ -70,7 +70,7 @@ function Resume() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] flex items-center justify-center py-12 xl:py-0"
+      className="min-h-[80vh] lg:ml-16 flex items-center justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
         <Tabs

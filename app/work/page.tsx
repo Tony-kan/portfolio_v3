@@ -75,7 +75,7 @@ function Work() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="min-h-[80vh] lg:ml-14  flex flex-col justify-center py-5 xl:px-0"
+      className="min-h-[80vh] lg:ml-16  flex flex-col justify-center py-5 xl:px-0"
     >
       <div className="container mx-auto">
         <Tabs

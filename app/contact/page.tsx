@@ -44,13 +44,13 @@ function Contact() {
         opacity: 1,
         transition: { delay: 2.4, duration: 0.4, ease: "easeIn" },
       }}
-      className="py-6 text-white"
+      className="py-1 lg:ml-20  text-white"
     >
       <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-[30px]">
+        <div className="flex flex-col xl:flex-row gap-[20px]">
           {/* form  */}
           <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+            <form className="flex flex-col gap-4 p-10 bg-[#27272c] rounded-xl">
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
 
               <p className="text-white/60">
@@ -60,7 +60,7 @@ function Contact() {
                 voluptates incidunt. Asperiores obcaecati dolorem iusto.
               </p>
               {/* input  */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <Input type="firstname" placeholder="First Name" />
                 <Input type="lastname" placeholder="Last Name" />
                 <Input type="email" placeholder="Email" />
@@ -98,7 +98,7 @@ function Contact() {
             <ul>
               {info.map((item, index) => {
                 return (
-                  <li key={index} className="flex gap-6 items-center mb-6">
+                  <li key={index} className="flex gap-5 items-center mb-6">
                     <div className="w-[52px] h-[52px] xl:w-[72px] xl:h-[72px] rounded-md bg-[#27272c] text-accent flex items-center justify-center">
                       <div className="text-[28px]"> {item.icon}</div>
                     </div>
