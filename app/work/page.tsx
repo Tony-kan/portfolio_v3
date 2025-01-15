@@ -188,11 +188,13 @@ function Work() {
                 iconsStyles=""
               /> */}
 
-                  <WorkProjectSliderBtns
-                    containerStyles="flex gap-2 right-0 bottom-0 xl:bottom-10 z-20 mt-2 w-full xl:absolute justify-end xl:w-max xl:justify-none"
-                    btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
-                    iconsStyles=""
-                  />
+                  {filteredProjects.length > 1 && (
+                    <WorkProjectSliderBtns
+                      containerStyles="flex gap-2 right-0 bottom-0 xl:bottom-10 z-20 mt-2 w-full xl:absolute justify-end xl:w-max xl:justify-none"
+                      btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                      iconsStyles=""
+                    />
+                  )}
                 </Swiper>
               </div>
             </div>
