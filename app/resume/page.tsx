@@ -24,8 +24,7 @@ import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
 // skills data
 const skills = {
   title: "my skills",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-           Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
+  description: `A versatile skill set in modern web and app development, with expertise in creating responsive, scalable, and user-friendly solutions. These tools and technologies power my passion for delivering impactful digital experiences.`,
   skillList: [
     {
       icon: <FaHtml5 />,

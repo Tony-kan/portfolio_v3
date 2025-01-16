@@ -1,8 +1,8 @@
 // About Data
 export const about = {
   title: "about me",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
+  description:
+    "Passionate programmer and freelance developer with a knack for coding, problem-solving, and exploring innovative tech solutions. Skilled in game development, 3D art creation with Blender, and crafting interactive user experiences. Ready to collaborate and bring innovative ideas to life",
   info: [
     {
       fieldName: "Name",
@@ -40,8 +40,7 @@ export const about = {
 export const experience = {
   icon: "/assets/resume/badge.svg",
   title: "my experience",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
+  description: `With a strong foundation in software development and a passion for innovation, I've gained diverse experience across leadership, freelancing, and building impactful tech solutions. My journey reflects a commitment to delivering excellence and solving complex problems.`,
   items: [
     {
       company: "Digimax MW",
@@ -65,8 +64,7 @@ export const experience = {
 export const education = {
   icon: "/assets/resume/cap.svg",
   title: "my education",
-  description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-         Cras et ante lectus. In hac habitasse platea dictumst. Donec id fringilla justo. Nam nec feugiat mi.`,
+  description: `My educational journey blends formal academics with specialized bootcamps, equipping me with a strong foundation in computer science, software development, and cutting-edge technologies. These experiences have fueled my passion for continuous learning and innovation.`,
   items: [
     {
       institution: "University of malawi",
@@ -98,6 +96,69 @@ export const education = {
 
 // projects
 export const projects = [
+  {
+    num: "01",
+    name: "CoffeeShop",
+    category: "React Native",
+    title: "Project 1",
+    description:
+      "CoffeeShop is a mobile application for coffee lovers, featuring Google authentication, dynamic coffee listings, and order management. Designed with modern tools like Expo SDK 52, Supabase, Tailwind CSS, and TypeScript for a seamless and scalable experience.",
+    stack: [
+      { name: "React Native" },
+      { name: "Expo" },
+      { name: "TypeScript" },
+      { name: "Supabase" },
+      { name: "Zustand" },
+      { name: "Tailwind CSS" },
+      { name: "Google Maps" },
+    ],
+    image: "/assets/work/coffeeShop.png",
+    images: ["/assets/work/coffeeShop.png"],
+    live: "/",
+    github: "/",
+  },
+  {
+    num: "02",
+    name: "HomeTrack",
+    category: "React Native",
+    title: "Project 2",
+    description:
+      "HomeTrack is a real estate application with React Native, featuring Google authentication, dynamic property listings, and user profiles. Designed with modern tools like Expo SDK 52, Appwrite, Tailwind CSS, and TypeScript for a seamless and scalable experience.",
+    stack: [
+      { name: "React Native" },
+      { name: "Expo" },
+      { name: "TypeScript" },
+      { name: "Appwrite" },
+      { name: "Nativewind" },
+      { name: "Tailwind CSS" },
+    ],
+    image: "/assets/work/homeTrack.png",
+    images: ["/assets/work/homeTrack.png"],
+    live: "/",
+    github: "/",
+  },
+  {
+    num: "03",
+    name: "Uber Clone",
+    category: "React Native",
+    title: "Project 3",
+    description:
+      "Uber Clone is a mobile application built with React Native for handling the user interface, Google Maps for rendering maps with directions, Stripe for handling payments, and serverless Postgres for managing databases. The app is styled with TailwindCSS.",
+    stack: [
+      { name: "React Native" },
+      { name: "Expo" },
+      { name: "Stripe" },
+      { name: "PostgreSQL" },
+      { name: "Google Maps" },
+      { name: "Zustand" },
+      { name: "Clerk" },
+      { name: "Tailwind CSS" },
+    ],
+    image: "/assets/work/uberClone.png",
+    images: ["/assets/work/uberClone.png"],
+    live: "/",
+    github: "/",
+  },
   {
     num: "01",
     name: "FurniShop",
