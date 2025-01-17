@@ -29,6 +29,7 @@ const categories = ["React Native", "Swift", "Websites", "UI/UX"];
 function Work() {
   // const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
   // const [project, setProject] = useState(projects[0]);
+  const [emblaRef, emblaApi] = useEmblaCarousel();
   const [activeCategory, setActiveCategory] = useState("React Native");
   // const [filteredProjects, setFilteredProjects] = useState([]);
   const [filteredProjects, setFilteredProjects] = useState(() =>
@@ -42,7 +43,14 @@ function Work() {
     console.log("filtered", filtered);
     setFilteredProjects(filtered);
     setProject(filtered[0] || null);
-  }, [activeCategory]);
+    if (emblaApi) emblaApi.scrollTo(0);
+  }, [activeCategory, emblaApi]);
+
+  useEffect(() => {
+    if (filteredProjects.length > 0) {
+      setProject(filteredProjects[0]); // Set the default project
+    }
+  }, [filteredProjects]);
 
   const [project, setProject] = useState(filteredProjects[0] || null);
 
@@ -50,15 +58,16 @@ function Work() {
     // get current slide index
     const currentIndex = swiper.activeIndex;
     // update projects state based on current slide index
-    setProject(filteredProjects[currentIndex] || null);
+    // setProject(filteredProjects[currentIndex] || null);
+    if (filteredProjects[currentIndex]) {
+      setProject(filteredProjects[currentIndex]);
+    }
   };
 
   const calculateProjectCount = (category: string) => {
     return allProjects.filter((project) => project.category === category)
       .length;
   };
-
-  const [emblaRef, emblaApi] = useEmblaCarousel();
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -178,19 +187,35 @@ function Work() {
                               className="object-cover"
                               alt=""
                             /> */}
-                          <div className="embla h-full w-full" ref={emblaRef}>
+                          <div
+                            className="embla h-full w-full -z-20"
+                            ref={emblaRef}
+                          >
                             <div className="embla__container  h-full w-full">
                               {project?.images?.map((image, index) => (
                                 <div
-                                  className="embla__slide relative h-full w-full"
+                                  className="embla__slide relative h-full w-full flex justify-center items-center "
                                   key={index}
                                 >
-                                  <Image
-                                    src={image}
-                                    fill
-                                    className="object-cover"
-                                    alt=""
-                                  />
+                                  {activeCategory === "React Native" ? (
+                                    <Image
+                                      key={index}
+                                      src={image}
+                                      height={0}
+                                      width={0}
+                                      // fill
+                                      className="object-fit w-auto h-[420px]"
+                                      alt=""
+                                    />
+                                  ) : (
+                                    <Image
+                                      key={index}
+                                      src={image}
+                                      fill
+                                      className="object-cover"
+                                      alt=""
+                                    />
+                                  )}
                                 </div>
                               ))}
                             </div>

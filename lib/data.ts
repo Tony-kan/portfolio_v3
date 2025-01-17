@@ -1,3 +1,7 @@
+import { images } from "@/constants";
+
+console.log(JSON.stringify(images, null, 2));
+
 // About Data
 export const about = {
   title: "about me",
@@ -113,7 +117,15 @@ export const projects = [
       { name: "Google Maps" },
     ],
     image: "/assets/work/coffeeShop.png",
-    images: ["/assets/work/coffeeShop.png"],
+    images: [
+      images.coffee_images.coffee_signup_screen,
+      images.coffee_images.coffee_signin_screen,
+      images.coffee_images.coffee_home_screen,
+      images.coffee_images.coffee_order_screen,
+      images.coffee_images.coffee_details_screen,
+      images.coffee_images.coffee_delivery_screen,
+      images.coffee_images.coffee_profile_screen,
+    ],
     live: "/",
     github: "/",
   },
@@ -133,17 +145,17 @@ export const projects = [
       { name: "Tailwind CSS" },
     ],
     image: "/assets/work/homeTrack.png",
-    images: ["/assets/work/homeTrack.png"],
+    images: images.home_track_image.list,
     live: "/",
     github: "/",
   },
   {
     num: "03",
-    name: "Uber Clone",
+    name: "Ryde",
     category: "React Native",
     title: "Project 3",
     description:
-      "Uber Clone is a mobile application built with React Native for handling the user interface, Google Maps for rendering maps with directions, Stripe for handling payments, and serverless Postgres for managing databases. The app is styled with TailwindCSS.",
+      "Ryde is a mobile application built with React Native for handling the user interface, Google Maps for rendering maps with directions, Stripe for handling payments, and serverless Postgres for managing databases. The app is styled with TailwindCSS.",
     stack: [
       { name: "React Native" },
       { name: "Expo" },
@@ -155,7 +167,7 @@ export const projects = [
       { name: "Tailwind CSS" },
     ],
     image: "/assets/work/uberClone.png",
-    images: ["/assets/work/uberClone.png"],
+    images: images.ryde_images.list,
     live: "/",
     github: "/",
   },
@@ -175,7 +187,7 @@ export const projects = [
   {
     num: "02",
     name: "Inferno",
-    category: "React Native",
+    category: "Websites",
     title: "Project 2",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
