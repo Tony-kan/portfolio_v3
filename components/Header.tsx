@@ -12,7 +12,7 @@ function Header() {
       <div className="container mx-auto flex justify-between items-center py-4">
         {/* logo  */}
         <Link href="/" className="flex items-center justify-between gap-6">
-          <h1 className="text-4xl font-semibold">Tk</h1>
+          <h1 className="text-4xl font-semibold">Tony</h1>
           <span className="text-accent">.</span>
         </Link>
 

@@ -30,14 +30,16 @@ export default function Home() {
 
         {/* btn and socials  handlers */}
         <div className="flex flex-col xl:flex-row items-center ml-16 mt-24">
-          <Button
-            variant="outline"
-            size="lg"
-            className="uppercase flex items-center gap-2"
-          >
-            <span>Download CV</span>
-            <FiDownload className="text-xl" />
-          </Button>
+          <a download href="/assets/tony_kanyamuka_resume_updated.pdf">
+            <Button
+              variant="outline"
+              size="lg"
+              className="uppercase flex items-center gap-2"
+            >
+              <span>Download CV</span>
+              <FiDownload className="text-xl" />
+            </Button>
+          </a>
         </div>
         <Stats />
       </div>

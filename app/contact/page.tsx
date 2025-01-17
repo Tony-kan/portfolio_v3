@@ -54,10 +54,11 @@ function Contact() {
               <h3 className="text-4xl text-accent">Let&apos;s work together</h3>
 
               <p className="text-white/60">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Reprehenderit, voluptatem dicta tempore doloremque ut natus
-                facere quam deleniti ad. Autem porro magni provident veniam
-                voluptates incidunt. Asperiores obcaecati dolorem iusto.
+                {`Ready to bring your ideas to life? Whether you’re looking for a
+                collaborator on your next big project or need expert insights,let’s connect! I’m
+                passionate about turning visions into reality, and I’d love to
+                hear about your goals. Reach out, and let’s create something
+                exceptional together`}
               </p>
               {/* input  */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
