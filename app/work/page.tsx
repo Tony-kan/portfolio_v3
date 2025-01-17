@@ -138,7 +138,7 @@ function Work() {
                 {/* buttons  */}
                 <div className="flex items-center gap-4">
                   {/* Live Project button */}
-                  <Link href={project?.live || ""}>
+                  <Link href={project?.live || ""} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -152,7 +152,7 @@ function Work() {
                   </Link>
 
                   {/* github project button */}
-                  <Link href={project?.github || ""}>
+                  <Link href={project?.github || ""} target="_blank">
                     <TooltipProvider delayDuration={100}>
                       <Tooltip>
                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
@@ -187,10 +187,7 @@ function Work() {
                               className="object-cover"
                               alt=""
                             /> */}
-                          <div
-                            className="embla h-full w-full -z-20"
-                            ref={emblaRef}
-                          >
+                          <div className="embla h-full w-full " ref={emblaRef}>
                             <div className="embla__container  h-full w-full">
                               {project?.images?.map((image, index) => (
                                 <div
@@ -212,8 +209,8 @@ function Work() {
                                       key={index}
                                       src={image}
                                       fill
-                                      className="object-cover"
-                                      alt=""
+                                      className="object-contain"
+                                      alt={image.toString()}
                                     />
                                   )}
                                 </div>

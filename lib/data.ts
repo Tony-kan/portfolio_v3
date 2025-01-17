@@ -108,7 +108,6 @@ export const projects = [
     description:
       "CoffeeShop is a mobile application for coffee lovers, featuring Google authentication, dynamic coffee listings, and order management. Designed with modern tools like Expo SDK 52, Supabase, Tailwind CSS, and TypeScript for a seamless and scalable experience.",
     stack: [
-      { name: "React Native" },
       { name: "Expo" },
       { name: "TypeScript" },
       { name: "Supabase" },
@@ -155,7 +154,6 @@ export const projects = [
     description:
       "Ryde is a mobile application built with React Native for handling the user interface, Google Maps for rendering maps with directions, Stripe for handling payments, and serverless Postgres for managing databases. The app is styled with TailwindCSS.",
     stack: [
-      { name: "React Native" },
       { name: "Expo" },
       { name: "Stripe" },
       { name: "PostgreSQL" },
@@ -170,50 +168,70 @@ export const projects = [
   },
   {
     num: "01",
-    name: "FurniShop",
+    name: "PodCraft",
     category: "Websites",
     title: "Project 1",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
-    stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript" }],
-    image: "/assets/work/thumb1.png",
-    images: ["/assets/work/thumb1.png"],
-    live: "/",
-    github: "/",
+    stack: [
+      { name: "NextJs" },
+      { name: "OpenAi" },
+      { name: "Convex" },
+      { name: "Clerk" },
+    ],
+    image: "/assets/podcraft/home.png",
+    images: ["/assets/podcraft/home.png"],
+    live: "https://podcraft.vercel.app",
+    github: "https://github.com/Tony-kan/podcraft",
   },
   {
     num: "02",
-    name: "Inferno",
+    name: "Story Book",
     category: "Websites",
     title: "Project 2",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
     stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "node.js" }],
-    image: "/assets/work/thumb2.png",
-    images: [
-      "/assets/work/thumb2.png",
-      "/assets/work/thumb2.png",
-      "/assets/work/thumb2.png",
-    ],
-    live: "/",
-    github: "/",
+    image: "/assets/ai_story_book/home.png",
+    images: ["/assets/ai_story_book/home.png"],
+    live: "https://storybook-ai-alpha.vercel.app/",
+    github: "https://github.com/Tony-kan/storybook-ai",
   },
   {
     num: "03",
-    name: "Alina Lee",
+    name: "Anime Vault",
     category: "Websites",
     title: "Project 3",
     description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
           Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
-    stack: [{ name: "Next.js" }, { name: "Tailwind.css" }],
-    image: "/assets/work/thumb3.png",
-    images: [
-      "/assets/work/thumb3.png",
-      "/assets/work/thumb3.png",
-      "/assets/work/thumb3.png",
-      "/assets/work/thumb3.png",
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "Framer Motion" },
     ],
-    live: "/",
-    github: "/",
+    image: "/assets/anime_vault/home_1.png",
+    images: [
+      "/assets/anime_vault/home_1.png",
+      "/assets/anime_vault/home_2.png",
+    ],
+    live: "https://anime-vault-sigma.vercel.app/",
+    github: "https://github.com/Tony-kan/anime_vault",
+  },
+  {
+    num: "04",
+    name: "Financ Dashboard",
+    category: "Websites",
+    title: "Project 4",
+    description: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+          Hic dicta maiores rem sint ipsum saepe. Ab rem ut minima error itaque laudantium nam.`,
+    stack: [
+      { name: "Next.js" },
+      { name: "Tailwind.css" },
+      { name: "Postgres" },
+    ],
+    image: "/assets/financial_dashboard/home.png",
+    images: ["/assets/financial_dashboard/home.png"],
+    live: "https://nextjs-dashboard-app-eosin.vercel.app/",
+    github: "https://github.com/Tony-kan/dashboard-app",
   },
 ];
