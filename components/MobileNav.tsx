@@ -2,8 +2,16 @@
 
 import { usePathname } from "next/navigation";
 import React from "react";
-import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetClose,
+  SheetHeader,
+  SheetTitle,
+} from "./ui/sheet";
 import Link from "next/link";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { navLinks } from "@/constants";
 import { CiMenuFries } from "react-icons/ci";
 
@@ -15,6 +23,13 @@ function MobileNav() {
         <CiMenuFries className="text-[32px] text-accent" />
       </SheetTrigger>
       <SheetContent className="flex flex-col text-white">
+        {/* Accessible title for screen readers */}
+        <SheetHeader>
+          <VisuallyHidden>
+            <SheetTitle>Mobile Navigation Menu</SheetTitle>
+          </VisuallyHidden>
+        </SheetHeader>
+
         {/* logo */}
         <div className="mt-32 mb-40 text-center text-2xl">
           <Link href="/">
@@ -25,8 +40,8 @@ function MobileNav() {
         </div>
         {/* nav */}
         <nav className="flex flex-col justify-center items-center gap-8">
-          {navLinks.map((link, index) => {
-            return (
+          {navLinks.map((link, index) => (
+            <SheetClose asChild key={index}>
               <Link
                 href={link.path}
                 key={index}
@@ -37,8 +52,8 @@ function MobileNav() {
               >
                 {link.name}
               </Link>
-            );
-          })}
+            </SheetClose>
+          ))}
         </nav>
       </SheetContent>
     </Sheet>
