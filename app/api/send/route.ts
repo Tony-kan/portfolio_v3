@@ -71,7 +71,19 @@ export async function POST(request: Request) {
       </a>
     </p>
     <p style="margin: 5px 0;">
-      &copy; ${new Date().getFullYear()} ${body.firstName} ${body.lastName}
+      &copy; ${new Date().getFullYear()} ${"Tony"} ${" Kanyamuka"}. All rights reserved.
+    </p>
+    <p style="color: #94a3b8; font-size: 14px; margin: 8px 0 0;">
+      ${new Date().toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })} at ${new Date().toLocaleTimeString("en-US", {
+        hour: "2-digit",
+        minute: "2-digit",
+        timeZoneName: "short",
+      })}
     </p>
   </div>
 </div>
