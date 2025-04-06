@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -20,6 +21,7 @@ import {
   FaNodeJs,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs } from "react-icons/si";
+import { profileImage } from "@/constants";
 
 // skills data
 const skills = {
@@ -185,7 +187,7 @@ function Resume() {
               </div>
             </TabsContent>
             {/* about me content  */}
-            <TabsContent
+            {/* <TabsContent
               value="about"
               className="w-full text-center xl:text-left"
             >
@@ -196,6 +198,52 @@ function Resume() {
                 <p className="max-w-[600px] text-white/60  mx-auto xl:mx-0">
                   {about.description}
                 </p>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {about.info.map((item, index) => {
+                    return (
+                      <li
+                        key={index}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/60">
+                          {item.fieldName}:{""}
+                        </span>
+                        <span className="text-xl font-bold text-white">
+                          {item.fieldValue}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent> */}
+            <TabsContent
+              value="about"
+              className="w-full text-center xl:text-left"
+            >
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col xl:flex-row items-center gap-8 xl:gap-12">
+                  {/* Profile Image */}
+                  <div className="relative w-[250px] h-[250px] flex-shrink-0">
+                    <Image
+                      src={profileImage} // Update with your image path
+                      alt="Profile photo"
+                      fill
+                      className="rounded-full object-cover border-4 border-accent/30"
+                    />
+                  </div>
+
+                  {/* Text Content */}
+                  <div className="flex-1">
+                    <h3 className="text-4xl text-white font-bold capitalize mb-6">
+                      {about.title}
+                    </h3>
+                    <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                      {about.description}
+                    </p>
+                  </div>
+                </div>
+
                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
                   {about.info.map((item, index) => {
                     return (

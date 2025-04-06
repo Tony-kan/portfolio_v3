@@ -3,6 +3,7 @@ import github from "../public/assets/social/GitHub.png";
 import instagram from "../public/assets/social/Instagram.png";
 import linkedin from "../public/assets/social/LinkedIn.png";
 import youtube from "../public/assets/social/YouTube.png";
+import profile_mage from "../public/assets/profile_image.jpeg";
 
 // coffeeshop images
 import coffee_signin_screen from "../public/assets/coffeeShop_images/signin_screen.png";
@@ -128,6 +129,8 @@ export const images = {
     ],
   },
 };
+
+export const profileImage = profile_mage;
 
 // export const coffeeShop_images = {
 //   coffee_signin_screen,
