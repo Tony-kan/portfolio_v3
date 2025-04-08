@@ -5,6 +5,12 @@ import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
 import { socialLinks } from "@/constants";
 import Image from "next/image";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 function Header() {
   return (
@@ -36,12 +42,21 @@ function Header() {
                 target="_blank"
               >
                 <div className="bg-white hover:bg-accent-hover w-10 h-8 flex items-center justify-center rounded-sm">
-                  <Image
-                    className="w-6 h-5"
-                    src={link.icon}
-                    alt={link.name}
-                    objectFit="contain"
-                  />
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className=" flex justify-center items-center group">
+                        <Image
+                          className="w-6 h-5"
+                          src={link.icon}
+                          alt={link.name}
+                          objectFit="contain"
+                        />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="capitalize text-md">{`Visit ${link.name} page`}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
                 </div>
               </Link>
             );
