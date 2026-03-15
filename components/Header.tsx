@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React from "react";
-// import Nav from "./Nav";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
 import { socialLinks } from "@/constants";
@@ -21,14 +20,6 @@ function Header() {
           <h1 className="text-4xl font-semibold">Tony</h1>
           <span className="text-accent">.</span>
         </Link>
-
-        {/* desktop nav & hire btn  */}
-        {/* <div className="hidden xl:flex items-center gap-8">
-          <Nav />
-          <Link href="/contact">
-            <Button>Hire Me</Button>
-          </Link>
-        </div> */}
 
         {/* social links
          */}

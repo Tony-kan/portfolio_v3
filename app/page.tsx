@@ -3,7 +3,6 @@ import Stats from "@/components/Stats";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { FiDownload } from "react-icons/fi";
-// import Image from "next/image";
 
 export default function Home() {
   return (

@@ -49,7 +49,7 @@ export const experience = {
     {
       company: "Digimax MW",
       position: "Lead Frontend Developer",
-      duration: "Feb 2024  - October 2024",
+      duration: "Feb 2024 - October 2024",
     },
     {
       company: "Braining X MW",
@@ -60,6 +60,16 @@ export const experience = {
       company: "Upwork",
       position: "Freelance Developer",
       duration: "Present",
+    },
+    {
+      company: "Threesix - Sana Cash & Carry",
+      position: "Junior Frontend Engineer",
+      duration: "Aug 2025 - Present",
+    },
+    {
+      company: "African to Silicon Valley - A2SV (remote)",
+      position: "Flutter Mobile Developer (Intern)",
+      duration: "Dec 2025 - Present",
     },
   ],
 };
@@ -73,7 +83,7 @@ export const education = {
     {
       institution: "University of malawi",
       degree: "Bachelor of science in computer science",
-      duration: "2019  - 2025",
+      duration: "2019 - 2025",
     },
     {
       institution: "dev",
@@ -87,7 +97,7 @@ export const education = {
     },
     {
       institution: "GameDev.tv",
-      degree: "Unreal  Engine ",
+      degree: "Unreal Engine ",
       duration: "2024",
     },
     {

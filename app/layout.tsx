@@ -17,8 +17,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portofolio V3",
-  description: "Version 3 of programmer portfolio",
+  title: "Tony Kanyamuka | Web & Mobile Developer",
+  description:
+    "Portfolio of Tony Kanyamuka, a web and mobile developer specializing in React, Next.js, React Native,Flutter, Node.js,Go, and AI-driven solutions.",
 };
 
 export default function RootLayout({
