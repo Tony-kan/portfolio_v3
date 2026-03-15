@@ -5,6 +5,7 @@ import StairTransition from "@/components/StairTransition";
 import PageTransition from "@/components/PageTransition";
 import Header from "@/components/Header";
 import SideNavBar from "@/components/SideNavBar";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +38,8 @@ export default function RootLayout({
 
         <StairTransition />
         <PageTransition>{children}</PageTransition>
-      </body>
+        <Analytics />
+      </body>npm
     </html>
   );
 }
